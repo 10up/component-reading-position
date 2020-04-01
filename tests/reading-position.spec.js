@@ -50,7 +50,7 @@ describe( 'General Tests', () => {
 
 		await page.evaluate( () => {
 			// initiates the reading position indicator
-			new TenUp.readingPosition( '.reading-position' );
+			new TenUp.readingPosition( '.reading-position-indicator' );
 			window.scrollBy(0, 20000);
 			return;
 		} );
@@ -75,7 +75,7 @@ describe( 'General Tests', () => {
 
 		await page.evaluate( () => {
 			// initiates the reading position indicator
-			new TenUp.readingPosition( '.reading-position', {
+			new TenUp.readingPosition( '.reading-position-indicator', {
 				onCreate,
 			} );
 
@@ -99,7 +99,7 @@ describe( 'General Tests', () => {
 
 		await page.evaluate( () => {
 			// initiates the reading position
-			new TenUp.readingPosition( '.reading-position', {
+			new TenUp.readingPosition( '.reading-position-indicator', {
 				scrollStart,
 			} );
 
@@ -126,7 +126,7 @@ describe( 'General Tests', () => {
 
 		await page.evaluate( () => {
 			// initiates the reading position
-			new TenUp.readingPosition( '.reading-position', {
+			new TenUp.readingPosition( '.reading-position-indicator', {
 				scrolling,
 			} );
 
@@ -153,7 +153,7 @@ describe( 'General Tests', () => {
 
 		await page.evaluate( () => {
 			// initiates the reading position
-			new TenUp.readingPosition( '.reading-position', {
+			new TenUp.readingPosition( '.reading-position-indicator', {
 				scrollEnd,
 			} );
 
