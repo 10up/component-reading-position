@@ -24,6 +24,7 @@
 	background-color: transparent;
 
 	/* Progress bar value for IE10+ */
+	color: #A30811;
 	color: var(--c-reading-position);
 }
 
@@ -32,9 +33,14 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
+	background-color: #A30811;
 	background-color: var(--c-reading-position);
 }
 
 progress::-moz-progress-bar {
+	background-color: #A30811;
 	background-color: var(--c-reading-position);
 }
+
+
+/*# sourceMappingURL=reading-position-indicator.css.map*/
