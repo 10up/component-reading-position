@@ -222,7 +222,7 @@ export default class ReadingPosition {
 	get percentage() {
 
 		// setting the value making sure that it can't be below zero
-		const value = Math.max( 0, window.scrollY - this.min );
+		const value = Math.max( 0, window.pageYOffset - this.min );
 
 		// making sure the value can't be above 100
 		return Math.min( 100, value * 100 / this.max );
