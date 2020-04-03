@@ -1,31 +1,32 @@
 :root {
-	--c-reading-position: #A30811;
+	--c-reading-position: #a30811;
 }
 
-.reading-position-indicator {
-	/* Positioning */
-	position: fixed;
-	left: 0;
-	top: 0;
-
-	/* Dimensions */
-	width: 100%;
-	height: 5px;
+.reading-position {
 
 	/* Reset the appearance */
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
 
-	/* Get rid of the default border in Firefox/Opera. */
-	border: none;
-
 	/* Progress bar container for Firefox/IE10+ */
 	background-color: transparent;
 
+	/* Get rid of the default border in Firefox/Opera. */
+	border: none;
+
 	/* Progress bar value for IE10+ */
-	color: #A30811;
+	color: #a30811;
 	color: var(--c-reading-position);
+	height: 4px;
+	left: 0;
+
+	/* Positioning */
+	position: fixed;
+	top: 0;
+
+	/* Dimensions */
+	width: 100%;
 }
 
 progress::-webkit-progress-bar {
@@ -33,14 +34,14 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-	background-color: #A30811;
+	background-color: #a30811;
 	background-color: var(--c-reading-position);
 }
 
 progress::-moz-progress-bar {
-	background-color: #A30811;
+	background-color: #a30811;
 	background-color: var(--c-reading-position);
 }
 
 
-/*# sourceMappingURL=reading-position-indicator.css.map*/
+/*# sourceMappingURL=reading-position.css.map*/

@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 
-const APP = 'https://10up.github.io/reading-position-indicator/demo/test-demo.html';
+const APP = 'http://localhost:8000/demo/demo-test.html';
 const width = 1440;
 const height = 860;
 
@@ -26,14 +26,13 @@ beforeEach( async () => {
 		height
 	} );
 
+	await page.goto( APP, { waitUntil: 'networkidle0' } );
+
 } );
 
-describe( 'General Tests', () => {
+describe( 'Functionality Tests', () => {
 
 	test( 'starts with percentage of 0', async () => {
-
-		// Visit the page in headless Chrome
-		await page.goto( APP );
 
 		const progressElement = await page.$('progress');
 		const percentageHandle = await progressElement.getProperty( 'value' );
@@ -45,12 +44,9 @@ describe( 'General Tests', () => {
 
 	test( 'updates the percentage when scrolled', async () => {
 
-		// Visit the page in headless Chrome
-		await page.goto( APP, { waitUntil: 'networkidle0' } );
-
 		await page.evaluate( () => {
 			// initiates the reading position indicator
-			new TenUp.readingPosition( '.reading-position-indicator' );
+			new TenUp.readingPosition( '.reading-position' );
 			window.scrollBy(0, 20000);
 			return;
 		} );
@@ -64,10 +60,11 @@ describe( 'General Tests', () => {
 
 	} );
 
-	test( 'calls onCreate callback', async () => {
+} );
 
-		// Visit the page in headless Chrome
-		await page.goto( APP, { waitUntil: 'networkidle0' } );
+describe( 'Callback Function Tests', () => {
+
+	test( 'onCreate', async () => {
 
 		const onCreate = jest.fn();
 
@@ -75,7 +72,7 @@ describe( 'General Tests', () => {
 
 		await page.evaluate( () => {
 			// initiates the reading position indicator
-			new TenUp.readingPosition( '.reading-position-indicator', {
+			new TenUp.readingPosition( '.reading-position', {
 				onCreate,
 			} );
 
@@ -88,18 +85,15 @@ describe( 'General Tests', () => {
 
 	} );
 
-	test( 'calls scrollStart callback', async () => {
-
-		// Visit the page in headless Chrome
-		await page.goto( APP, { waitUntil: 'networkidle0' } );
+	test( 'scrollStart', async () => {
 
 		const scrollStart = jest.fn();
 
-		await page.exposeFunction('scrollStart', scrollStart);
+		await page.exposeFunction( 'scrollStart', scrollStart );
 
 		await page.evaluate( () => {
 			// initiates the reading position
-			new TenUp.readingPosition( '.reading-position-indicator', {
+			new TenUp.readingPosition( '.reading-position', {
 				scrollStart,
 			} );
 
@@ -115,58 +109,31 @@ describe( 'General Tests', () => {
 
 	} );
 
-	test( 'calls scrolling callback', async () => {
-
-		// Visit the page in headless Chrome
-		await page.goto( APP, { waitUntil: 'networkidle0' } );
-
-		const scrolling = jest.fn();
-
-		await page.exposeFunction('scrolling', scrolling);
-
-		await page.evaluate( () => {
-			// initiates the reading position
-			new TenUp.readingPosition( '.reading-position-indicator', {
-				scrolling,
-			} );
-
-			window.scrollBy( 0, 600 );
-
-			return;
-
-		} );
-
-		await delay(500);
-
-		expect( scrolling ).toHaveBeenCalled();
-
-	} );
-
-	test( 'calls scrollEnd callback', async () => {
+	test( 'scrollEnd', async () => {
 
 		// Visit the page in headless Chrome
 		await page.goto( APP, { waitUntil: 'networkidle0' } );
 
 		const scrollEnd = jest.fn();
 
-		await page.exposeFunction('scrollEnd', scrollEnd);
+		await page.exposeFunction( 'scrollEnd', scrollEnd );
 
 		await page.evaluate( () => {
 			// initiates the reading position
-			new TenUp.readingPosition( '.reading-position-indicator', {
+			new TenUp.readingPosition( '.reading-position', {
 				scrollEnd,
 			} );
 
 			window.scrollBy( 0, 400 );
-			setTimeout(() => {
+			setTimeout( () => {
 				window.scrollBy( 0, 9000 );
-			}, 200);
+			}, 200 );
 
 			return;
 
 		} );
 
-		await delay(500);
+		await delay( 500 );
 
 		expect( scrollEnd ).toHaveBeenCalled();
 

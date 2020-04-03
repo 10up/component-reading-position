@@ -1,8 +1,8 @@
 {
-  "name": "@10up/reading-position-indicator",
+  "name": "@10up/reading-position",
   "version": "0.1.0",
   "author": "10up",
-  "description": "Reading position component.",
+  "description": "A component that reports reading position/progress on a page while scrolling.",
   "main": "./src/reading-position.js",
   "style": "./dist/reading-position.css",
   "scripts": {
@@ -13,15 +13,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/10up/reading-position-indicator.git"
+    "url": "git+https://github.com/10up/component-reading-position.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/10up/reading-position-indicator/issues"
+    "url": "https://github.com/10up/component-reading-position/issues"
   },
-  "homepage": "https://github.com/10up/reading-position-indicator#readme",
+  "homepage": "https://github.com/10up/component-reading-position#readme",
   "devDependencies": {
     "@10up/eslint-config": "^1.0.9",
+    "@10up/stylelint-config": "^1.0.9",
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
@@ -39,6 +40,11 @@
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^5.3.0",
     "puppeteer": "^2.1.0",
+    "stylelint": "^9.10.1",
+    "stylelint-config-wordpress": "^14.0.0",
+    "stylelint-declaration-use-variable": "^1.7.2",
+    "stylelint-order": "^2.2.1",
+    "stylelint-webpack-plugin": "^1.1.2",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
   },

@@ -2,13 +2,13 @@
 
 [![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Build Status][cli-img]][cli-url]
 
-[cli-img]: https://travis-ci.org/10up/reading-position-indicator.svg?branch=master
-[cli-url]: https://travis-ci.org/10up/reading-position-indicator
+[cli-img]: https://travis-ci.org/10up/component-reading-position.svg?branch=master
+[cli-url]: https://travis-ci.org/10up/component-reading-position
 
 ## Installation
 
 ### NPM
-`npm install --save @10up/reading-position-indicator`
+`npm install --save @10up/reading-position`
 
 ### Standalone
 Clone this repo and import `reading-position.js` and `reading-position.css` from the `dist/` directory.
@@ -31,7 +31,7 @@ This component accepts two arguments, the selector for the reading-position cont
 This is the markup template expected by the component.
 
 ```html
-<progress class="reading-position"></progress>
+<progress class="reading-position" value="0" max="100"></progress>
 ```
 
 ### CSS
@@ -39,7 +39,7 @@ This is the markup template expected by the component.
 The styles can be imported into your existing codebase by using PostCSS imports, or by including the standalone CSS file in your project.
 
 #### PostCSS Imports
-`@import '@10up/reading-position-indicator';`
+`@import '@10up/reading-position';`
 
 #### Standalone
 Include the `reading-position.css` file from the `dist/` directory.
@@ -51,7 +51,7 @@ Create a new instance by supplying the selector to use for the reading-position 
 #### NPM
 
 ```javascript
-import ReadingPosition from '@10up/reading-position-indicator';
+import ReadingPosition from '@10up/reading-position';
 
 new ReadingPosition( '.reading-position', {
 	onCreate: function() {
@@ -100,4 +100,4 @@ Example implementations can be found in the `demo` directory.
 
 ## Like what you see?
 
-<a href="http://10up.com/contact/"><img src="https://10updotcom-wpengine.s3.amazonaws.com/uploads/2016/10/10up-Github-Banner.png" width="850"></a>
+<a href="http://10up.com/contact/"><img src="https://10updotcom-wpengine.s3.amazonaws.com/uploads/2016/10/10up-Github-Banner.png" width="850" alt="Work with 10up"></a>

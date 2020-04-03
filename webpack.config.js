@@ -3,8 +3,9 @@
 const path = require( 'path' );
 const BrowserSyncPlugin = require( 'browser-sync-webpack-plugin' );
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
+const StyleLintPlugin = require( 'stylelint-webpack-plugin' );
 
-let componentName = 'reading-position-indicator';
+let componentName = 'reading-position';
 
 module.exports = {
 	mode: process.env.NODE_ENV ? 'development' : 'production',
@@ -63,6 +64,11 @@ module.exports = {
 		} ),
 		new MiniCssExtractPlugin( {
 			filename: `${ componentName }.css`,
+		} ),
+		new StyleLintPlugin( {
+			context: path.resolve( process.cwd(), './src/' ),
+			files: '**/*.css',
+			fix: true,
 		} ),
 	],
 };
