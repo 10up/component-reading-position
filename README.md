@@ -7,50 +7,13 @@
 
 ## Installation
 
-### NPM
-`npm install --save @10up/reading-position`
-
-### Standalone
-Clone this repo and import `reading-position.js` and `reading-position.css` from the `dist/` directory.
-
-## API
-
-This component accepts two arguments, the selector for the reading-position container and an object containing optional callbacks.
-
-### Callbacks
-
-- `onCreate`: Called after the reading-position is initialized on page load
-- `scrollStart`: Called when the scrollable are enters the visible area
-- `scrollEnd`: Called when the scrollable are leaves the visible area
-- `scrolling`: Called when on scroll events while the scrollable area is in the visible area
+`npm install @10up/reading-position --save`
 
 ## Usage
 
-### Markup
-
-This is the markup template expected by the component.
-
-```html
-<progress class="reading-position" value="0" max="100"></progress>
-```
-
-### CSS
-
-The styles can be imported into your existing codebase by using PostCSS imports, or by including the standalone CSS file in your project.
-
-#### PostCSS Imports
-`@import '@10up/reading-position';`
-
-#### Standalone
-Include the `reading-position.css` file from the `dist/` directory.
-
-### JavaScript
-
 Create a new instance by supplying the selector to use for the reading-position and an object containing any necessary callback functions.
 
-#### NPM
-
-```javascript
+```js
 import ReadingPosition from '@10up/reading-position';
 
 new ReadingPosition( '.reading-position', {
@@ -69,30 +32,24 @@ new ReadingPosition( '.reading-position', {
 } );
 ```
 
-#### Standalone
+#### CSS Imports
 
-Include the `reading-position.js` file from the `dist/` directory and access the component from the gobal `TenUp` object.
-
-```javascript
-let myReadingPosition = new TenUp.readingPosition( '.reading-position', {
-	onCreate: function() {
-		console.log( 'onCreate callback' );
-	},
-	scrollStart: function( percentage ) {
-		console.log( 'scrollStart callback', percentage );
-	},
-	scrollEnd: function( percentage ) {
-		console.log( 'scrollEnd callback', percentage );
-	},
-	scrolling: function( percentage ) {
-		console.log( 'scrolling callback', percentage );
-	}
-} );
+```css
+@import url("@10up/reading-position");
 ```
+
+The styles can be imported into your existing codebase by using PostCSS imports, or by including the standalone CSS file in your project.
+
+
+[View official documentation for this package](https://baseline.10up.com/component/reading-position)
+
+### CSS
+
+ The styles can be imported into your existing codebase by using PostCSS imports, or by including the standalone CSS file in your project.
 
 ## Demo
 
-Example implementations can be found in the `demo` directory.
+Example implementations at: https://10up.github.io/component-animate/demo/
 
 ## Support Level
 
@@ -100,4 +57,4 @@ Example implementations can be found in the `demo` directory.
 
 ## Like what you see?
 
-<a href="http://10up.com/contact/"><img src="https://10updotcom-wpengine.s3.amazonaws.com/uploads/2016/10/10up-Github-Banner.png" width="850" alt="Work with 10up"></a>
+<a href="http://10up.com/contact/"><img src="https://10updotcom-wpengine.s3.amazonaws.com/uploads/2016/10/10up-Github-Banner.png" width="850"></a>
