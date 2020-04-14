@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "author": "10up",
   "description": "A component that reports reading position/progress on a page while scrolling.",
-  "main": "./src/reading-position.js",
+  "main": "./dist/reading-position.js",
   "style": "./dist/reading-position.css",
   "scripts": {
     "start": "npm install && npm run build",
