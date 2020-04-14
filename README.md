@@ -49,7 +49,7 @@ The styles can be imported into your existing codebase by using PostCSS imports,
 
 ## Demo
 
-Example implementations at: https://10up.github.io/component-animate/demo/
+Example implementations at: https://10up.github.io/component-reading-position/demo/
 
 ## Support Level
 
@@ -57,4 +57,4 @@ Example implementations at: https://10up.github.io/component-animate/demo/
 
 ## Like what you see?
 
-<a href="http://10up.com/contact/"><img src="https://10updotcom-wpengine.s3.amazonaws.com/uploads/2016/10/10up-Github-Banner.png" width="850"></a>
+<a href="http://10up.com/contact/"><img src="https://10updotcom-wpengine.s3.amazonaws.com/uploads/2016/10/10up-Github-Banner.png" width="850" alt="Work with 10up"></a>
