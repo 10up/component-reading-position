@@ -46,7 +46,7 @@ export default class ReadingPosition {
 		document.documentElement.classList.add( 'js' );
 
 		// Settings
-		this.settings = Object.assign( {}, defaults, options );
+		this.settings = { ...defaults, ...options };
 
 		this.updating = false;
 		this.$startElement = document.querySelector( this.settings.startElement );
