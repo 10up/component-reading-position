@@ -36,9 +36,7 @@ export default class ReadingPosition {
 
 		// Bail out if there's no readingPosition.
 		if (!this.readingPosition) {
-			console.error(
-				'10up ReadingPosition: Target not found. A valid target (readingPosition) must be used.',
-			); // eslint-disable-line
+			console.error('10up ReadingPosition: Target not found. A valid target (readingPosition) must be used.'); // eslint-disable-line
 			return;
 		}
 
@@ -48,6 +46,7 @@ export default class ReadingPosition {
 		this.settings = { ...defaults, ...options };
 
 		this.updating = false;
+
 		this.startElement = document.querySelector(this.settings.startElement);
 		this.endElement = document.querySelector(this.settings.endElement);
 		this.inScrollArea = false;
