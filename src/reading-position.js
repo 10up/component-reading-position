@@ -35,10 +35,10 @@ export default class ReadingPosition {
 		}
 
 		// ReadingPosition container
-		this.$readingPosition = document.querySelector( elementSelector );
+		this.readingPosition = document.querySelector( elementSelector );
 
 		// Bail out if there's no readingPosition.
-		if ( ! this.$readingPosition  ) {
+		if ( ! this.readingPosition  ) {
 			console.error( '10up ReadingPosition: Target not found. A valid target (readingPosition) must be used.'  ); // eslint-disable-line
 			return;
 		}
@@ -49,11 +49,11 @@ export default class ReadingPosition {
 		this.settings = { ...defaults, ...options };
 
 		this.updating = false;
-		this.$startElement = document.querySelector( this.settings.startElement );
-		this.$endElement = document.querySelector( this.settings.endElement );
+		this.startElement = document.querySelector( this.settings.startElement );
+		this.endElement = document.querySelector( this.settings.endElement );
 		this.inScrollArea = false;
 
-		this.setupReadingPosition( this.$readingPosition );
+		this.setupReadingPosition( this.readingPosition );
 
 		/**
 		 * Called after the readingPosition is initialized on page load.
@@ -111,7 +111,7 @@ export default class ReadingPosition {
 	handleScroll() {
 
 		// setting the value of the progress bar to the current percentage
-		this.$readingPosition.setAttribute( 'value', this.percentage );
+		this.readingPosition.setAttribute( 'value', this.percentage );
 
 		// check wether is in scroll area based on the percentage
 		if ( 0 < this.percentage && 100 > this.percentage ) {
@@ -176,10 +176,10 @@ export default class ReadingPosition {
 		let scrollAreaHeight = 0;
 
 		// check wether an endElement is present and a valid DOM Node
-		if ( this.$endElement && this.$endElement instanceof HTMLElement ) {
+		if ( this.endElement && this.endElement instanceof HTMLElement ) {
 
 			// setting the scroll area height to the top ofset of the end element
-			scrollAreaHeight = this.$endElement.offsetTop;
+			scrollAreaHeight = this.endElement.offsetTop;
 
 		} else {
 
@@ -205,10 +205,10 @@ export default class ReadingPosition {
 	get min() {
 
 		// check wether an startElement is present and a valid DOM Node
-		if ( this.$startElement && this.$startElement instanceof HTMLElement ) {
+		if ( this.startElement && this.startElement instanceof HTMLElement ) {
 
 			// returning the top ofset of the element, making sure the value can't be below zero
-			return Math.max( 0, this.$startElement.offsetTop );
+			return Math.max( 0, this.startElement.offsetTop );
 
 		}
 
