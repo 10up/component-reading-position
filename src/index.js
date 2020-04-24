@@ -1,6 +1,6 @@
 import ReadingPosition from './reading-position';
 
-if ( 'object' !== typeof window.TenUp ) {
+if (typeof window.TenUp !== 'object') {
 	window.TenUp = {};
 }
 
