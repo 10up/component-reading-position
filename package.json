@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/10up/component-reading-position#readme",
   "devDependencies": {
-    "@10up/eslint-config": "^1.0.9",
+    "@10up/eslint-config": "^2.0.0",
     "@10up/stylelint-config": "^1.0.9",
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
