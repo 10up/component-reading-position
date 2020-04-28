@@ -1,9 +1,6 @@
 # 10up Reading Position component
 
-[![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Build Status][cli-img]][cli-url]
-
-[cli-img]: https://travis-ci.org/10up/component-reading-position.svg?branch=master
-[cli-url]: https://travis-ci.org/10up/component-reading-position
+[![Support Level](https://img.shields.io/badge/support-active-green.svg)](#support-level) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation
 
