@@ -49,7 +49,7 @@ The styles can be imported into your existing codebase by using PostCSS imports,
 
 ## Demo
 
-Example implementations at: https://10up.github.io/component-reading-position/demo/
+Example implementations at: https://10up.github.io/component-reading-position/demo/index.html
 
 ## Support Level
 
