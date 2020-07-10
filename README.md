@@ -5,11 +5,23 @@
 [cli-img]: https://travis-ci.org/10up/component-reading-position.svg?branch=master
 [cli-url]: https://travis-ci.org/10up/component-reading-position
 
+[View official documentation for this package](https://baseline.10up.com/component/reading-position)
+
 ## Installation
 
 `npm install @10up/reading-position --save`
 
 ## Usage
+
+#### CSS Imports
+
+```css
+@import url("@10up/reading-position");
+```
+
+The styles can be imported into your existing codebase by using PostCSS imports, or by including the standalone CSS file in your project.
+
+#### JavaScript
 
 Create a new instance by supplying the selector to use for the reading-position and an object containing any necessary callback functions.
 
@@ -31,21 +43,6 @@ new ReadingPosition( '.reading-position', {
 	}
 } );
 ```
-
-#### CSS Imports
-
-```css
-@import url("@10up/reading-position");
-```
-
-The styles can be imported into your existing codebase by using PostCSS imports, or by including the standalone CSS file in your project.
-
-
-[View official documentation for this package](https://baseline.10up.com/component/reading-position)
-
-### CSS
-
- The styles can be imported into your existing codebase by using PostCSS imports, or by including the standalone CSS file in your project.
 
 ## Demo
 
